@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "1d304cb7-1d5b-4896-9a6e-1d4224cd9574",
+		"_postman_id": "6e9e9b36-7530-412e-91a5-2e67f04e4131",
 		"name": "French",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33062048"
 	},
 	"item": [
 		{
@@ -264,6 +265,116 @@
 								{
 									"key": "lang",
 									"value": "zh_cn"
+								},
+								{
+									"key": "appid",
+									"value": "b1b15e88fa797225412429c1c50c122a1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dossier \\ fidélité ! : [\"5,2%\"]{^2+1-3*4=0} > l'@d_min; < (en € & $ ?).",
+			"item": [
+				{
+					"name": "RequêteDossierSpecOK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check that HTTP status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Check that cnt is equal to 40\", function () {",
+									"",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.cnt).to.eql(40);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=b1b15e88fa797225412429c1c50c122a1",
+							"protocol": "https",
+							"host": [
+								"samples",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "524901"
+								},
+								{
+									"key": "appid",
+									"value": "b1b15e88fa797225412429c1c50c122a1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Caractères spéciaux",
+			"item": [
+				{
+					"name": "Requête \\ fidélité ! : [\"5,2%\"]{^2+1-3*4=0} > l'@d_min; < (en € & $ ?).",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check that HTTP status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Check that cnt is equal to 40\", function () {",
+									"",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.cnt).to.eql(40);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=b1b15e88fa797225412429c1c50c122a1",
+							"protocol": "https",
+							"host": [
+								"samples",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "524901"
 								},
 								{
 									"key": "appid",
