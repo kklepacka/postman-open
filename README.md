@@ -32,6 +32,14 @@ Standard:
                       - airpollution_ok
                       - airpollution2_ko
 
+```
+Dossier \ fidélité ! : ["5,2%"]{^2+1-3*4=0} > l'@d_min; < (en € & $ ?).
+```
+
+```
+Requête \ fidélité ! : ["5,2%"]{^2+1-3*4=0} > l'@d_min; < (en € & $ ?).
+```
+
 
 Les paramètres de test attendus sont les suivants :
 
